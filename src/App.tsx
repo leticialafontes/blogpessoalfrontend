@@ -3,24 +3,27 @@ import "./App.css";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
-import Cadastro from "./pages/cadastro";
 import Login from "./pages/login";
+import Cadastro from "./pages/cadastro";
+import { AuthProvider } from "./context/AuthContext";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
-        <div className="min-h-80vh]">
-          <Routes>
-            <Route path="/" element={<Login />} />
+      <AuthProvider>
+        <BrowserRouter>
+          <Navbar />
+          <div className="min-h-[80vh]">
+            <Routes>
+              <Route path="/" element={<Login />} />
               <Route path="/home" element={<Home />} />
-            <Route path="/" element={<Cadastro />} />
-            <Route path="/login" element={<Login />} />
-          </Routes>
-        </div>
-        <Footer />
-      </BrowserRouter>
+              <Route path="/cadastro" element={<Cadastro />} />
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          </div>
+          <Footer />
+        </BrowserRouter>
+      </AuthProvider>
     </>
   );
 }
