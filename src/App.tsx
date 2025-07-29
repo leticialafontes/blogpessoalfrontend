@@ -3,8 +3,8 @@ import "./App.css";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
-import Cadastro from "./pages/cadastro";
 import Login from "./pages/login";
+import Cadastro from "./pages/cadastro";
 
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
         <div className="min-h-80vh]">
           <Routes>
             <Route path="/" element={<Login />} />
-              <Route path="/home" element={<Home />} />
-            <Route path="/" element={<Cadastro />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/login" element={<Login />} />
           </Routes>
         </div>
