@@ -6,6 +6,7 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login";
 import Cadastro from "./pages/cadastro";
 import { AuthProvider } from "./context/AuthContext";
+import ListaTemas from "./components/temas/listatemas";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/temas" element={<ListaTemas />} />
             </Routes>
           </div>
           <Footer />
