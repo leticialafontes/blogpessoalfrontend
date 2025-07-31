@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../../contexts/AuthContext";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -29,7 +29,10 @@ function Navbar() {
             <Link to="/temas" className="hover:underline">
               Temas
             </Link>
-            Cadastrar tema Perfil
+            <Link to="/cadastrartema" className="hover:underline">
+              Cadastrar tema
+            </Link>
+            Perfil
             <Link to="" onClick={logout} className="hover:underline">
               Sair
             </Link>

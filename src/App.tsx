@@ -5,8 +5,10 @@ import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import Login from "./pages/login";
 import Cadastro from "./pages/cadastro";
-import { AuthProvider } from "./context/AuthContext";
+import { AuthProvider } from "./contexts/AuthContext";
 import ListaTemas from "./components/temas/listatemas";
+import FormTema from "./components/temas/formtema";
+import DeletarTema from "./components/temas/deletartema";
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/login" element={<Login />} />
               <Route path="/temas" element={<ListaTemas />} />
+              <Route path="/cadastrartema" element={<FormTema />} />
+              <Route path="/editartema/:id" element={<FormTema />} />
+              <Route path="/deletartema/:id" element={<DeletarTema />} />
             </Routes>
           </div>
           <Footer />
